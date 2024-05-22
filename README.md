@@ -1,6 +1,7 @@
 # Empower-Your-Website-with-a-Custom-Llama3-Chatbot
 Create your own personalized chatbot experience directly within your web page using Llama3. This Streamlit-based application allows you to interact with a chatbot trained on your specified web content, providing tailored responses to your queries.
 
+![Descripción de la imagen](https://th.bing.com/th/id/OIF.8msJwlNNilDnmXEpnHBssQ?rs=1&pid=ImgDetMain){width=100px}
 
 ### Key Features:
 
@@ -88,3 +89,9 @@ index_diagram
 - Generate: A ChatModel / LLM produces an answer using a prompt that includes the question and the retrieved data
 
 ![](https://python.langchain.com/v0.2/assets/images/rag_retrieval_generation-1046a4668d6bb08786ef73c56d4f228a.png)
+
+# REFERENCE
+
+- https://python.langchain.com/v0.2/docs/tutorials/rag/
+- https://python.langchain.com/v0.2/docs/tutorials/local_rag/
+- 
