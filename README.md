@@ -23,9 +23,9 @@ Enhance your website's user experience and foster engaging interactions with you
 
 1. **Install Ollama**: Download Ollama for your operating system:
    - **Linux:**
-     ```bash
+   ```bash
      curl -fsSL https://ollama.com/install.sh | sh
-     ```
+   ```
    - **Windows:** *(Note: Windows installation method may vary)*
 
 2. **Fetch Your Model**: Replace "llama3" with your desired model by running the following command:
