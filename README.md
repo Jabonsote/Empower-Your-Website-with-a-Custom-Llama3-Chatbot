@@ -17,7 +17,10 @@ Create your own personalized chatbot experience directly within your web page us
 4. Explore the chatbot's responses and engage in meaningful conversations tailored to your interests.
 
 Enhance your website's user experience and foster engaging interactions with your audience by integrating a personalized Llama3 chatbot using this intuitive Streamlit application.
-
+## Requeriments
+   ```bash
+     pip install langchain langchain_community streamlit
+   ```
 
 ## Steps to Set Up:
 
