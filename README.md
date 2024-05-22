@@ -1,7 +1,7 @@
 # Empower-Your-Website-with-a-Custom-Llama3-Chatbot
 Create your own personalized chatbot experience directly within your web page using Llama3. This Streamlit-based application allows you to interact with a chatbot trained on your specified web content, providing tailored responses to your queries.
 
-![Descripción de la imagen](https://th.bing.com/th/id/OIF.8msJwlNNilDnmXEpnHBssQ?rs=1&pid=ImgDetMain){width=100px}
+![lLAMA](https://th.bing.com/th/id/OIF.8msJwlNNilDnmXEpnHBssQ?rs=1&pid=ImgDetMain)
 
 ### Key Features:
 
