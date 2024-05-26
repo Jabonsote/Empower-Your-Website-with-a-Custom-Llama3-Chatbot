@@ -9,12 +9,19 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chains import RetrievalQA
 from langchain import hub
 
+# https://ollama.com/blog/embedding-models
+# https://github.com/ollama/ollama
+
+# ollama serve
 # sudo service ollama stop
 # ollama pull llama3
+# ollama pull moondream
 # /bin/python3 -m streamlit run chat.py
 
 # Modelo a usar
 MODEL = "llama3" 
+#MODEL = "moondream"
+#MODEL = "phi3:medium"
 
 @st.cache_data
 def load_data(url):
@@ -51,10 +58,10 @@ def main():
         st.session_state['conversation_history'] = []
 
     # Campo de entrada para la URL
-    url = st.text_input("Enter the URL to scrape", "https://d2l.ai/chapter_hyperparameter-optimization/hyperopt-intro.html")
+    url = st.text_input("Enter the URL to scrape", "https://d2l.ai/chapter_linear-regression/generalization.html#underfitting-or-overfitting")
 
     # Campo de entrada para la pregunta personalizada
-    custom_question = st.text_input("You: ", "What is the main idea?")
+    custom_question = st.text_input("You: ", "What is the main idea about the text?")
 
     # Botón para enviar la pregunta
     if st.button("Send"):
@@ -102,6 +109,17 @@ def main():
                 cleaned_response = cleaned_response.replace("[SYS]>", "")
                 cleaned_response = cleaned_response.replace("[SYS]", "")
                 cleaned_response = cleaned_response.replace("[/INST]", "")
+                cleaned_response = cleaned_response.replace("[/STUDENT]", "")
+                cleaned_response = cleaned_response.replace("[SYS>>", "")
+                cleaned_response = cleaned_response.replace("<<]", "")  
+                cleaned_response = cleaned_response.replace("[INST]<<SYS>>", "")
+                cleaned_response = cleaned_response.replace("<<</SYS>>", "")
+                cleaned_response = cleaned_response.replace("[/SYS>>]", "")
+                cleaned_response = cleaned_response.replace("<<SYS]]", "")
+                cleaned_response = cleaned_response.replace("[HUMAN]<<SYS>> ", "")
+                cleaned_response = cleaned_response.replace("[/HUMAN]", "")
+                cleaned_response = cleaned_response.replace("[/SYS]>", "")
+                
                 return cleaned_response.strip()
 
 
